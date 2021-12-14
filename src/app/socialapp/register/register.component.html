@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="register.component.css">
+
+</head>
+
+<body>
+
+  <body>
+    <div class="h">
+      <div class="container">
+
+        <form (ngSubmit) = "add()">
+          <h1>
+   REGISTRO DE USUSAIOS
+          </h1>
+
+
+
+          <input type="text" placeholder="el_morenito_19" [(ngModel)]="this.datos.user" name="user" required >
+
+
+          <input type="text" placeholder="Adrián" [(ngModel)]="this.datos.nombre" name="nombre"required >
+
+
+
+          <input type="text" placeholder="Pérez" [(ngModel)]="this.datos.apellidos" name="apellidos"required >
+
+
+          <input type="number" placeholder="69" [(ngModel)]="this.datos.edad" name="edad"required >
+
+
+
+          <input type="email" placeholder="---@---.--x" [(ngModel)]="this.datos.correo" name="correo"required >
+
+
+
+          <input type="text" placeholder="dsfdsdf.png" [(ngModel)]="this.datos.foto" name="foto"required >
+
+
+
+
+          <input type="password" placeholder="Contraseña" [(ngModel)]="this.datos.passwd" name="passwd" required>
+
+
+
+          <input type="text" placeholder="Confirmar Contraseña"  name="usuario" >
+
+    <div class="enviar">
+          <button type="submit">GUARDAR</button>
+        </div>
+
+
+
+
+        </form>
+
+
+        <app-mostrar></app-mostrar>
+
+
+
+      </div>
+    </div>
+  </body>
+

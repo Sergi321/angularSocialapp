@@ -1,0 +1,9 @@
+<div *ngFor="let usuario of item">
+    {{usuario.user}}
+    {{usuario.nombre}}
+
+    {{usuario.passwd}}
+
+    <button (click)="borrar(usuario)" class="submit-btn">Borrar</button>
+
+</div>
