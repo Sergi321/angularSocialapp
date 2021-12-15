@@ -1,0 +1,22 @@
+
+
+
+
+    <div *ngFor="let usuario of item">
+      {{usuario.user}}
+      {{usuario.apellidos}}
+        <button (click)="toggleShow()" type="checkbox">mostrar ocultar</button>
+        <div *ngIf="isShown" class="row container-fluid" id="divshow">
+
+        {{usuario.edad}}
+        {{usuario.nombre}}
+        {{usuario.foto}}
+        {{usuario.descrip}}
+        {{usuario.correo}}
+        {{usuario.passwd}}
+
+    </div>
+
+
+
+    </div>

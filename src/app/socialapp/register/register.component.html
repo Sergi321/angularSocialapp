@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="register.component.css">
+
+</head>
+
+<body>
+
+  <body>
+    <div class="h">
+      <div class="container">
+
+      <form [formGroup]="formularioContacto"  (ngSubmit) = " add()" >
+
+
+
+
+
+
+
+
+
+  <p>Nombre:
+    <input type="text" formControlName="nombre" [(ngModel)]="this.datos.user" required>
+    <span *ngIf="this.formularioContacto.get('nombre')?.errors?.['required']">
+      (El nombre no puede quedar vacío)
+    </span>
+  </p>
+
+
+<!-- //-------------------------------------------------------------------------------// -->
+
+<p>Apellidos:
+  <input type="text" formControlName="apellido" [(ngModel)]="this.datos.apellidos">
+  <span *ngIf="this.formularioContacto.get('apellido')?.errors?.['required']">
+    (los apellidos no pueden quedar vacío)
+  </span>
+
+</p>
+
+
+
+<!-- //-------------------------------------------------------------------------------// -->
+
+  <p>Mail:
+    <input type="text" formControlName="mail" [(ngModel)]="this.datos.correo">
+    <span *ngIf="this.formularioContacto.get('mail')?.errors?.['required']">
+      (El mail no puede quedar vacío)
+    </span>
+    <span *ngIf="this.formularioContacto.get('mail')?.errors?.['email']">
+      (El mail no es válido)
+    </span>
+  </p>
+
+  <!-- //-------------------------------------------------------------------------------// -->
+
+
+  <p>Edad:
+    <input type="number" formControlName="edat" [(ngModel)]="this.datos.edad">
+    <span *ngIf="this.formularioContacto.get('edat')?.errors?.['required']">
+      (la edad no puede quedar vacía)
+    </span>
+
+  </p>
+
+  <!-- //-------------------------------------------------------------------------------// -->
+
+
+  <p>Descripción<br>
+    <textarea rows="8" cols="60" formControlName="mensaje" [(ngModel)]="this.datos.descrip"></textarea>
+  </p>
+  <span *ngIf="this.formularioContacto.get('mensaje')?.errors?.['required']">
+    (la descripción no puede quedar vacía)
+  </span>
+  <span *ngIf="this.formularioContacto.get('mensaje')?.errors?.['maxlength']">
+    (Minimo 4 caracteres)
+  </span>
+
+
+  <!-- //-------------------------------------------------------------------------------// -->
+
+
+  <p>Contraseña:
+    <input type="text" formControlName="contra" [(ngModel)]="this.datos.passwd">
+    <span *ngIf="this.formularioContacto.get('contra')?.errors?.['required']">
+      (la contraseña no puede quedar vacía)
+    </span>
+
+  </p>
+
+  <p>Confirmar Contraseña:
+    <input type="text" formControlName="confirmar">
+    <span *ngIf="this.formularioContacto.get('confirmar')?.errors?.['required']">
+      (las contraseñas no coinciden)
+    </span>
+
+  </p>
+
+
+  <button>Registrar</button>
+</form>
+<div>{{resultado}}</div>
+
+
+
+
+
+      </div>
+    </div>
+  </body>
+
