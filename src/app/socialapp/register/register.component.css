@@ -1,12 +1,5 @@
 
-html { 
-    height:100%; 
-
- background-color: rgb(255, 255, 255);
-}
 body{
-    margin: 0px;
-    
     font-family: Roboto, "Segoe UI", Tahoma, sans-serif;
 
 }
@@ -15,22 +8,31 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 50%;
-    height: 50%;
+ width: 50%;
+margin-bottom: 50px;
     padding: 30px;
     background-color: white;
-    border: 20px solid grey;
+    background: rgba(158, 158, 158, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(68, 68, 70, 0.37);
+    backdrop-filter: blur( 10.5px );
+    -webkit-backdrop-filter: blur( 10.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 35px;
-    margin-top: 6%;
+    margin-top: 1.5%;
+
 }
 
 input{
     align-self: center;
-    padding: 5px;
-    border-radius: 20px;
+    opacity: 50%;
+    background-color: #d3d3d3;
+    box-shadow: 0 8px 32px 0 rgba(7, 7, 7, 0.37);
+    backdrop-filter: blur( 10.5px );
+    padding: 11px;
+    border-radius: 6px;
     margin-bottom: 15px;
-    border-radius: 35px;
-border: 5px solid gray;
+border: 0px solid rgb(255, 255, 255);
 width: 100% !important;
 }
 
@@ -45,8 +47,31 @@ H2{
     align-content: center;
     align-items: center;
     text-align: center;
+
 }
 
 h1{
-    color: grey;
+    color: #d3d3d3;
+
 }
+.error {
+  margin-top: -14px;
+  color: red;
+}
+
+
+.butta {
+
+    background-color: #525151;
+    box-shadow: 0 8px 32px 0 rgba(7, 7, 7, 0.37);
+    backdrop-filter: blur( 10.5px );
+    border: none;
+border-radius: 15px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+
+  }

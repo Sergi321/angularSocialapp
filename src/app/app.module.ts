@@ -7,9 +7,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './socialapp/admin/admin.component';
 import { RegisterComponent } from './socialapp/register/register.component';
 import { MostrarComponent } from './socialapp/mostrar/mostrar.component';
+import { InicioComponent } from './inicio/inicio.component';
 
 const routes: Routes = [
-  { path: 'inicio', component: AppComponent },
+  { path: 'inicio', component: InicioComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'registro', component: RegisterComponent },
   { path: 'mostrar', component: MostrarComponent }
@@ -18,6 +19,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    InicioComponent,
 
   ],
   imports: [

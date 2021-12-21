@@ -1,0 +1,88 @@
+
+
+.user-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.user_box {
+    display: flex;
+    flex-direction: column;
+margin: 20px;
+
+    font-size: 30px;
+
+    background: rgba( 255, 255, 255, 0.4 );
+border-radius: 20px;
+width: 30vw;
+}
+.fields{
+    margin-left: 2%;
+}
+
+
+
+body {
+    color: #555;
+    background-color: #5b9eed;
+    font-family: sans-serif;
+  }
+
+  .list-wrapper {
+    max-width: 400px;
+    margin: 50px auto;
+  }
+
+  .list {
+    background: #fff;
+    border-radius: 2px;
+    list-style: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+  }
+
+  .list-item {
+    display: flex;
+    margin: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .list-item:last-child {
+    border-bottom: none;
+  }
+  .list-item-image {
+    border-radius: 50%;
+    width: 64px;
+  }
+  .list-item-content {
+    margin-left: 20px;
+  }
+  .list-item-content h4,
+  .list-item-content p {
+    margin: 0;
+  }
+  .list-item-content h4 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  .list-item-content p {
+    margin-top: 5px;
+    color: #aaa;
+  }
+
+#divshow{
+    display: flex;
+    flex-direction: column;
+}
+.submit-btn{
+  border-radius: 9px;
+  background-color: red;
+  border: none;
+  margin-top: 8px;
+  cursor: pointer;
+  color: white;
+  padding: 8px;
+}

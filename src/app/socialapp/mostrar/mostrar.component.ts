@@ -11,13 +11,16 @@ import { RegisterComponent } from '../register/register.component';
 export class MostrarComponent implements OnInit {
 
 isShown: boolean = false ; // hidden by default
-
+usua: string="";
 
 toggleShow() {
 
 this.isShown = ! this.isShown;
 
 }
+
+
+
 
   constructor() { }
 

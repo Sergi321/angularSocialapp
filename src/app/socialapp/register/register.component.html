@@ -1,71 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="register.component.css">
 
-</head>
 
-<body>
-
-  <body>
     <div class="h">
       <div class="container">
 
-        <form (ngSubmit) = "add()">
-          <h1>
-   REGISTRO DE USUSAIOS
-          </h1>
+      <form [formGroup]="formularioContacto"  (ngSubmit) = " add()" >
 
-
-
-          <input type="text" placeholder="el_morenito_19" [(ngModel)]="this.datos.user" name="user" required >
-
-
-          <input type="text" placeholder="Adrián" [(ngModel)]="this.datos.nombre" name="nombre"required >
-
-
-
-          <input type="text" placeholder="Pérez" [(ngModel)]="this.datos.apellidos" name="apellidos"required >
-
-
-          <input type="number" placeholder="69" [(ngModel)]="this.datos.edad" name="edad"required >
-
-
-
-          <input type="email" placeholder="---@---.--x" [(ngModel)]="this.datos.correo" name="correo"required >
-
-
-
-          <input type="text" placeholder="dsfdsdf.png" [(ngModel)]="this.datos.foto" name="foto"required >
+<h1>REGISTRARSE</h1>
 
 
 
 
-          <input type="password" placeholder="Contraseña" [(ngModel)]="this.datos.passwd" name="passwd" required>
-
-
-
-          <input type="text" placeholder="Confirmar Contraseña"  name="usuario" >
-
-    <div class="enviar">
-          <button type="submit">GUARDAR</button>
-        </div>
 
 
 
 
-        </form>
+    <input type="text" formControlName="nombre" [(ngModel)]="this.datos.user" placeholder="Nombre" required>
+    <p class="error" *ngIf="this.formularioContacto.get('nombre')?.errors?.['required']">
+      <b> (El nombre no puede quedar vacío)</b>
+    </p>
 
 
-        <app-mostrar></app-mostrar>
+
+<!-- //-------------------------------------------------------------------------------// -->
+
+
+  <input type="text" formControlName="apellido" placeholder="Apellidos" [(ngModel)]="this.datos.apellidos">
+  <p class="error"*ngIf="this.formularioContacto.get('apellido')?.errors?.['required']">
+    <b>  (los apellidos no pueden quedar vacío)</b>
+  </p>
+
+
+
+
+
+<!-- //-------------------------------------------------------------------------------// -->
+
+
+    <input type="text" formControlName="mail" placeholder="Correo"[(ngModel)]="this.datos.correo">
+    <p class="error"*ngIf="this.formularioContacto.get('mail')?.errors?.['required']">
+      <b>  (El mail no puede quedar vacío)</b>
+    </p>
+    <p class="error"*ngIf="this.formularioContacto.get('mail')?.errors?.['email']">
+      <b> (El mail no es válido)</b>
+    </p>
+
+
+  <!-- //-------------------------------------------------------------------------------// -->
+
+
+    <input type="number" formControlName="edat" placeholder="edad"[(ngModel)]="this.datos.edad">
+    <p class="error"*ngIf="this.formularioContacto.get('edat')?.errors?.['required']">
+      <b>(la edad no puede quedar vacía)</b>
+    </p>
+
+
+
+  <!-- //-------------------------------------------------------------------------------// -->
+
+
+
+    <input type="text"  formControlName="mensaje" placeholder="Descripción"[(ngModel)]="this.datos.descrip">
+  <p class="error"*ngIf="this.formularioContacto.get('mensaje')?.errors?.['required']">
+   <b> (la descripción no puede quedar vacía)</b>
+  </p>
+  <p class="error"*ngIf="this.formularioContacto.get('mensaje')?.errors?.['minlength']">
+    <b> (Minimo 4 caracteres)</b>
+  </p>
+
+
+  <!-- //-------------------------------------------------------------------------------// -->
+
+
+  <input type="file"  formControlName="file" placeholder="foto"[(ngModel)]="this.datos.foto">
+  <p class="error"*ngIf="this.formularioContacto.get('file')?.errors?.['required']">
+    <b> (la descripción no puede quedar vacía)</b>
+  </p>
+  <!-- //-------------------------------------------------------------------------------// -->
+
+    <input type="password" formControlName="contra" placeholder="Contraseña" [(ngModel)]="this.datos.passwd">
+    <p class="error"*ngIf="this.formularioContacto.get('contra')?.errors?.['required']">
+      <b>(la contraseña no puede quedar vacía)</b>
+    </p>
+
+
+
+    <input type="password" formControlName="confirmar" placeholder="Confirmar Contraseña">
+    <p class="error"*ngIf="this.formularioContacto.get('confirmar')?.errors?.['required']">
+      <b>  (la confirmación está vacía)</b>
+    </p>
+
+
+
+<br>
+
+  <button class="butta"><b>REGISTRAR</b></button>
+</form>
+
+
+
 
 
 
       </div>
     </div>
-  </body>
-

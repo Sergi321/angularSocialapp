@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+html{
+    height: 100%;
+/* background-image: url("/assets/ThirstyWastefulIcefish-size_restricted\ \(1\).gif"); */
+background-color: rgb(56, 56, 56);
+background-repeat: no-repeat;
+
+background-size: 100% 100%;
+}
+body{
+
+    margin: 0px;
+    font-family: Roboto, "Segoe UI", Tahoma, sans-serif;
+}

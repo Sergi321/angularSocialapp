@@ -2,7 +2,7 @@ export class users {
 
   user:string="";
   apellidos:string="";
-  edad:number=69;
+  edad:string="";
   nombre:string="";
   foto:string="";
 descrip:string="";
